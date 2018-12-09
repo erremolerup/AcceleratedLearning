@@ -6,5 +6,9 @@ namespace Checkpoint02
 {
     class Room
     {
+        //PROPERTIES, rummets egenskaper
+        public string Name { get; set; }
+        public int Size { get; set; }
+        public int Unit { get; set; }
     }
 }
