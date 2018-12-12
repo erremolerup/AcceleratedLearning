@@ -13,29 +13,30 @@ namespace Modul5
         }
 
         public Car()
-        { }
-
+        {
+        }
         public int Weight { get; set; }
         public string Color { get; set; }
+    
+        //    public void SetColor(string xxx)
+        //    {
+        //        Color = xxx;
+        //    }
 
-    //    public void SetColor(string xxx)
-    //    {
-    //        Color = xxx;
-    //    }
+        //    public string GetColor()
+        //    {
+        //        return Color;
+        //    }
 
-    //    public string GetColor()
-    //    {
-    //        return Color;
-    //    }
+        //    public void SetWeight(int yyy)
+        //    {
+        //        Weight = yyy;
+        //    }
 
-    //    public void SetWeight(int yyy)
-    //    {
-    //        Weight = yyy;
-    //    }
-
-    //    public int GetWeight()
-    //    {
-    //        return Weight;
-    //    }
+        //    public int GetWeight()
+        //    {
+        //        return Weight;
+        //    }
     }
+
 }
