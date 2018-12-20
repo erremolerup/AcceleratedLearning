@@ -1,0 +1,10 @@
+Scrum Plugg
+
+* The main point of Agile frameworks is not providing a project management system but a project development system
+* Agility is helpful when it's hard to define the product upfront or the customer keeps changing its mind
+* The working product is always "incremental", which means we keep adding new features to it.
+* The development should be "iterative" which means we should repeat the development processes for each increment.
+* There are three roles in a Scrum project: Product Owner (1person), Scrum Master(1 person), Development Team(3-9 people)
+* The Scrum Team has two essential characteristics: Self-organized (manages its own efforts rather than being managed or directed by others) & Cross-functional(The Scrum team has all the expertise and competencies needed to get the job done without help from outside the team)
+
+* The Product Owner: Each project needs a business oriented person, aimed at maximizing the value of the product

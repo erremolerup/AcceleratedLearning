@@ -1,0 +1,217 @@
+Scrum lecture - Andreas Pettersson
+
+Waterfall model
+- Requirements
+- Design
+- Implementation
+- Verification
+- Maintenance
+Används klassiskt inom byggnadsindustrin
+Krävs väldigt noggrann planering, man går inte gärna uppför strömmen, bygga en bro, när man börjat bygga bron kan man inte gärna backa bandet och planera om.
+Passar inte inom mjukvaruutveckling!!
+
+Agila utvecklingsmetoder
+Cykler som går runt, runt, inkluderar kunden, vad vill ni ha?
+- Requirements
+- Plan
+- Design
+- Develop
+- Release
+- Track & monitor
+Dela upp i små bitar, kolla varje bit för sig
+
+Definition of scrum
+Ramverk - lös och ickekomplett struktur, inkludera olika tekniker för din specifika app/projekt. 
+- Lightweight
+- Simple to understand
+- Difficult to master
+Scrum är ingen process eller teknik
+- Det är ett ramverk inom vilket du kan använda olika processer och tekniker
+
+Scrum theory
+- Scrum is founded on EMPIRICAL PROCESS CONTROL THEORY!
+- Empiricism - knowledge comes from expereince and making decisions based on what is known
+- Three pillars within Scrums Empiricism
+	- Transparency
+	- Inspection
+	- Adaptation
+* Transparency 
+	- vitala delar inom projektet ska vara synliga för alla, särskilt dom ansvariga för resultatet
+	- man ska ha ett gemensamt språk så att alla förstår, inte använda svengelska t.ex. 
+	- de som gör jobbet måste ha en gemensam "Definition of Done", samma inställning till projektet, vad som ska hinnas med, vad som ska göras
+		* har du testat koden? har du bra variabelnamn? sitter måsvingarna där dom ska?
+* Inspection
+	- Alla i scrumteamet måste regelbundet inspektera Scrum Artifacts och processen gentemot Sprint Goal för att identifiera fallgropar etc.
+* Adaptation
+	- I mjukvaruprojekt måste man vara anpassningsbar, processen, utvecklingen, projektet, marknaden kommer att ändras
+	- Man måste kunna anpassa resultatet under projektets gång
+
+Scrum Values
+* Commitment - personer ska vara dedikerade för att tillsammans nå målet med projektet
+* Courage - ha modet att arbeta mot målet
+* Focus - alla ska hålla fokus på målet
+* Openness - alla ska vara öppna om förväntningar, frågor etc.
+* Respect - man ska ha respekt för varandra
+Om allt detta uppfylls skapas förtroende inom Scrum-teamet
+
+Scrum Team
+- Product Owner (Full-time/part-time)
+- Scrum Master (Full-time/part-time)
+- Development team (Full-time)
+- (Business Owner
+- Stakeholders)
+
+Product Owner
+- Den enda personen som hanterar Backlog
+- Måste skriva backloggen så att den är lätt att tyda, skrivs i prioriteringsordning
+- Alltid EN person
+- Accountable för resultatet
+
+The Development Team
+- Proffs som ansvarar för att ha en klar produkt efter varje Sprint
+- Självorganiserande - löser problemen själva, tar inte orders
+- Cross-functional, teamet har alla skills nödvändiga för att skapa produkten.
+- Developer - den enda titeln i Development Teams
+- Varje individ har specialicerade skills men ansvaret hör till hela Teamet som helhet
+
+Development Team Size
+- Optimal team: 3-9, 6 +- 3
+- Färre än 3 minskar interaktionen och därmed produktiviteten
+- Fler än 9 blir för stor komplexitet och därmed ineffektivt
+- SM och PO är inte inkluderade i dessa 9
+
+Scrum Master
+- SM är anscvarig för att Scrum är förstått och efterföljs
+- Ser till att teamet följer Scrum teorin, praktiken och regler
+- Som Alfred för Batman
+- The servant-leader för Scrum-teamet
+- Hjälpa dom utanför teamet (i övriga organisationen) att förstå Scrum och dess värderingar
+- En person kan vara Scrum Master i olika team
+
+SM service to PO
+- Hittar rätt tekniker för effektiv backlog management
+- Hjälper PO att förstå 
+
+SM service to DT
+- Coachar DP i arbetet, ser till att teamet jobbar enligt scrum
+- Removing IMPEDIMENTS till DPs framsteg, saker som stör processen, om man går förbi SM och PO och direkt till DT, ej bra
+- Ser till att det är rätt lookaler, bra luft
+- Coachar i Scrum i team där hela konceptet inte är helt förstått
+
+SM service till organisationen
+- Ta bort onödiga möten och dokumentation
+- Planera så att Scrum går att implementera (rätt lokaler och verktyg)
+- Arbeta med andra Scrum-masters
+
+Scrum Events
+Product Backlog
+Sprint Goal
+Spring Backlog
+1-4 week sprint and daily sprint
+
+- Planerade event är användna för att inga oplanerade möten ska förekomma
+- Alla event är time-boxed, detta för att hela tiden arbeta mot delmål
+- När du är klar med ditt arbete hjälper du andra
+- Om hela teamet är klara med arbetet återkopplar du stakeholders om de vill tidigarelägga mötet eller så kan ni fortsätta utveckla projektet.
+- Varje event ska ses som en formell möjlighet att inspektera och anpassa sig
+
+Sprint
+- Hjärtat av Scrummen
+- En månad eller kortare men inte längre
+- I slutet ska en användbar, potentiellt releasable produkt vara skapad
+- En ny sprint startar direkt efter den tidigare är avslutad
+- Sprint består utav: sprint planning, daily scrum, development work, sprint review, sprint retorspective
+- Varje sprint kan ses som ett projekt
+- Syftet med ett projekt är att skapa någonting 
+- Varje sprint har ett mål
+
+Cancelling a sprint
+- Det finns två sätt att göra det på
+- Endast PO kan avsluta en sprint innan Sprint time-box är över
+- Om Sprint Goal becomes OBSOLETE, ex. om företaget ändrar riktning eller om teknologi ändrar förutsättningar
+- Men pga den korta Sprint-perioden brukar man inte avsluta en sprint
+- Om man avslutar en sprint ska alla avslutade uppgifter i Product Backlog utvärderas av teamet
+- Alla oavslutade produkter i Product Backlog är omvärderade och stoppas tillbaka i Product Backlog
+- Väldigt ovanligt!
+
+Sprint Planning
+- Arbetet som ska genomföras planeras under Sprint Planning
+- Planen görs av hela Scrum Teamet
+- Time-Boxed till 8h för ett 1 månads-sprint
+- För kortare Sprint är planeringstiden oftast kortare
+- Scrum Mastern säkerställer att planeringen äger rum och att alla förstår vad det innebär
+- SM ser till så att alla håller sig till planen
+
+Sprint Planning - Topics
+- What can be done this Sprint?
+	* Development Team skapar en forecast för Product Backlog-produkter att levereras under Sprinten
+	* Teamet kan samarbeta med PO för att skapa bättre förståelse för vad som ska göras
+	* Bara DT kan bestämma vad som faktiskt kommer hinnas med
+	* Efter forecasten skapar DT ett Sprint Goal.
+- How will the chosen work get done?
+	* DT bestämmer!
+	* Efter Sprint Planning ska DT kunna förklara hur de tillsammans ska lyckas med Sprint Goal och skapa the Increment
+	* De valda delarna är delade i mindre tasks vilket hjälper DT att hantera problemen
+	* Föremålen och planen att genomföra den kallas Sprint Backlog
+
+Sprint Planning - Input & Output
+Input
+- Product Backlog
+- The latest product Increment 
+- Projected capacity of the DT during the Sprint
+- Past performance of the DT (measure tasks completed each sprint)
+Output
+- Sprint Goal
+- Sprint Backlog
+	* A not necessarily complete plan
+
+Sprint Goal
+- an objective set for the Print that can be met through the implementation of the chosen Product Backlog items.
+- Provides guidance to the Development Team on why it is building the Increment
+- It is created during the Sprint Planning meeting
+
+Daily Scrum
+- 15 minute time-boxed event för att synka aktiviteter och skapa en plan för kommande 24h
+- Vad innehåller en Daily Scrum?
+	* Vad gjorde jag igår som hjälpte DT mot SPrint Goal?
+	* Vad ska jag göra idag?
+	* Står jag inför några utmaningar/problem?
+- Team Members tar ofta längre diskussioner efter Daily Scrum
+- Om ett projekt innehåller flera Scum-Team, så har man ofta ett extra möte efter Daily Scrum "Scrum of Scrums"
+- Scrum of Scrums - en represenant från varje DT
+- Scrum Master ser till att DT har ett möte, men det är DTs ansvar att ha det
+- Scrum Master ser till att endast DT-medlemmar deltar i mötet men det kan vara medlemmar från andra team med för att observera
+
+Sprint Review
+- 4h time-boxed
+- Hålls i slutet av en Sprint
+- Informellt möte mellan alla deltagare, alla stakeholders om vad som gjordes under Sprinten
+- Resultatet av Sprint Reviewen är en reviderad Product Backlog 
+
+Sprint Retrospective
+- Tillbakablick och reflektion över vad man gjort
+- Vad gick bra?
+- Vad kunder gått bättre?
+- Vad kan förbättras?
+- Förbättra sig och anpassa inför nästa sprint
+- Efter Sprint Review och innan nästa Sprint Plannign
+- 3h time-boxed
+- SM deltar som en vanlig DT-medlem! Konstruktiv feedback till SM
+- Målet är att inspektera hur Sprinten gått, relationer, verktyg som använts
+- Identifiera och anpassa sig efter det som gick bra/dåligt
+- Skapa en plan för att implementera förbättringar till Scrum Teamets arbetssätt.
+
+SCRUM ARTIFACTS
+Product Backlog
+- En ordnad lista för allt som kan behövas till slutprodukten
+- PO är ansvarig (content, availability, ordering)
+- En Product Backlog är aldrig klar
+- Den tidigaste versionen visar bara initialt kända requirements
+- Beskrivning, ordning, estimering och värdering
+- Lista av framtida features, förstärkningar etc.
+- User Story Structure
+	* As a [type of user], I want [some goal] so that [some reason]
+	* Olika user stories beroende på vem slutkunden är
+Sprint Backlog
+- Set of items selevted for the SPrint and is highly visible
+- Forecast by DT
