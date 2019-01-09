@@ -36,6 +36,7 @@ namespace Uppgift10_4_2
 
         private static void DisplayPeople(List<string> list)
         {
+            Console.ForegroundColor = ConsoleColor.DarkCyan;
             foreach (var name in list)
             {
                 Console.WriteLine($"Name: {name}");

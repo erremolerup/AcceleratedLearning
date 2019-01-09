@@ -9,11 +9,11 @@ namespace Uppgift8_3
         {
             while (true)
             {
-                string animalString = AskForAnimals();
+                string animalsString = AskUserForAnimals();
 
                 try
                 {
-                    string[] animals = ParseAnimals(animalString);
+                    string[] animals = ParseAnimals(animalsString);
                     PrintAnimals(animals);
                     break;
                 }
@@ -22,53 +22,51 @@ namespace Uppgift8_3
                     Console.WriteLine(e.Message);
                     Console.ResetColor();
                 }
-
             }
         }
 
-        private static string AskForAnimals()
+        private static string AskUserForAnimals()
         {
             Console.Write("Enter a list of animals: ");
 
             Console.ForegroundColor = ConsoleColor.Green;
-            string animalString = Console.ReadLine();
-            return animalString;
+            string animals = Console.ReadLine();
+            return animals;
         }
 
-        private static string[] ParseAnimals(string animalString)
+        private static string[] ParseAnimals(string animalsString)
         {
-            //if (string.IsNullOrWhiteSpace) men måste då använda en bool
-            if (animalString.Length == 0)
+            if (animalsString.Length == 0)
             {
                 Console.ForegroundColor = ConsoleColor.Red;
-                throw new ArgumentException("Animal string does not contain any letters");
+                throw new ArgumentException("Animal string does not contain any letters!");
             }
 
-            string[] animals = animalString.Split(',');
+            string[] animals = animalsString.Split(',');
 
             for (int i = 0; i < animals.Length; i++)
             {
                 animals[i] = animals[i].Trim();
             }
+
             foreach (var animal in animals)
             {
-                if (animalString.Length > 20)
+                if (animalsString.Length > 20)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    throw new ArgumentException($"{animal} contains too many letters!");
+                    throw new ArgumentException($"'{animal}' has too many letters");
                 }
             }
 
             foreach (var animal in animals)
             {
-                Regex reg = new Regex(@"^[a-zåäöA-ZÅÄÖ]+$");
+                Regex reg = new Regex(@"^[a-zåäöA-ZÅÄÖ+$]");
 
                 if (!reg.Match(animal).Success)
                 {
                     Console.ForegroundColor = ConsoleColor.Red;
-                    throw new ArgumentException($"Animal {animal} contains invalid letters");
+                    throw new ArgumentException($"'{animal}' contains invalid letters");
                 }
-
             }
             Console.WriteLine();
             return animals;
@@ -76,8 +74,10 @@ namespace Uppgift8_3
 
         private static void PrintAnimals(string[] animals)
         {
-            Console.WriteLine($"There are {animals.Length} animals in the list.");
+            Console.WriteLine($"There are {animals.Length} animals in the list");
             Console.WriteLine();
         }
+
+
     }
 }

@@ -6,17 +6,19 @@ namespace Modul5
 {
     public class Car
     {
+        public int Weight { get; set; }
+        public string Color { get; set; }
+
+
         public Car(string c, int w)
         {
             Color = c;
             Weight = w;
         }
 
-        public Car()
-        {
-        }
-        public int Weight { get; set; }
-        public string Color { get; set; }
+        //public Car()
+        //{
+        //}
     
         //    public void SetColor(string xxx)
         //    {

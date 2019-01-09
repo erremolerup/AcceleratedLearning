@@ -1,0 +1,24 @@
+Databaser SQL
+
+En välstrukturerad databas sparar utrymme, upprätthåller korrekthet i datan och onödig data, ger åtkomst till data på användbart sätt.
+
+Designande av en effektiv och användbar databas:
+1. Identifiera syftet med databasen
+	- Sätt att samla information innan skapande av databas: Intervjua personer som kommer att använda den, analysera det som kommer att ingå i databasen, fakturor, undersökningar, scheman etc., kamma igenom existerande datasystem (fysiska och digitala filer)
+	- Börja med att samla in existerande data som ska vara med. Lista sedan typer av data som ska inkluderas som människor, saker, ställen, event etc. Bryt ner informationen i små användbara delar. T.ex. separera gatuadresser från land så att man kan filtrera på antingen eller senare. Undvik att placera samma data mer än en tabell.
+2. Organisering av datan i tabeller
+	- Besläktad data är grupperad i tabeller, börja med en tabell för varje typ av 'entity' som produkt, sälj, kunder, orders.
+	- Vanliga datatyper: CHAR (en specifik längd på text), VARCHAR (text av olika längd), TEXT (mycket text), INT (positivs eller negativa heltal), FLOAT/DOUBLE (lagrar "flytande" nummer), BLOB (binär data)
+	- Titeln på varje box (istället för hela tabellen i diagrammet) ska vara förknippat med vad tabellen beskriver
+	- Bestäm vilken data som ska vara primary key (PK) för varje tabell. De ska vara unika, oföränderliga och alltid finnas (aldrig NULL eller tomma, t.ex. så är ordernummer och användarnamn bra men inte telefonnummer eller gatuadresser)
+3. Specificera primary keys och analysera förhållanden
+	- One-to-one relationer(1:1): när det endast finns en instans av A för varje instans av B
+	- One-to-many relationer(1:M): när en instans i en tabell associeras med många entries i en annan tabell. T.ex. en kund som lagt många ordrar.
+	- Many-to-many relationer(M:N): när flera enheter i en tabell kan associeras med flera enheter i en annan tabell. T.ex. med studenter och kurser, en student kan ha flera kurser och en kurs kan ha flera studenter. Dessa måste dock delas upp i två one-to-many relationer med en tabell i mitten som är kopplad till båda.
+	- Ett annat sätt att analysera förhållanden på är att reflektera över vilken av sidorna som måste existera för att den andra ska existera. T.ex. så måste ett land existera för att det ska kunna ha en representant i FN.
+	- Två enheter kan också vara lika beroende av varandra
+	- En tabell kan ibland peka tillbaka på sig själv, t.ex. i en tabell av anställda kan en anställd och en chef vara länkade.
+	- Överflödiga förhållanden: när det är uttryckt mer än en gång
+4. Använd BP för att standardisera tabellerna och ha allt likadant
+	- First normal form: varje cell i en tabell kan endast ha ett värde, aldrig en lista av värden. Detta kan inte heller lösas genom att addera kolumner, en tabell med grupper av repeterade eller nära relaterade attribut möter inte the First Normal Form.
+	- Second normal form: Varje attribut ska vara direkt beroende av the primary key, inte genom något annat attribut. T.ex. attributet ålder som beror av födelsedag som i sin tur beror av studentID möter inte dessa krav.
