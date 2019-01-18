@@ -10,6 +10,7 @@ namespace Checkpoint6._2
     public class SpaceContext : DbContext
     {
         public DbSet<Spaceship> Spaceships { get; set; }
+        public DbSet<RavioliOnboard> RavioliOnBoard { get; set; }
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

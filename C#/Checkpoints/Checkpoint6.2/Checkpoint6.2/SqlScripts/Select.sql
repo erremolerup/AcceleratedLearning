@@ -2,3 +2,6 @@
 
 Select *
 From Spaceships
+
+Select *
+From 
