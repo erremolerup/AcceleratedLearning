@@ -1,0 +1,196 @@
+Jessica Engström
+jessica@azm.se
+
+AZM DEV - hologram, UX, det måste vara lättanvänt
+Coding After Work (podcast)
+
+
+Planering av app/sida
+Branding
+Tekniker för att optimera
+
+Planering
+Idé - allt börjar med en idé
+En app eller hemsida som vi saknar något på
+Det behöver inte vara helt unikt men måste ha något som sticker ut
+Börja smått!!! 
+Den måste ha nånting som den är bäst på!
+
+* BEST AT-statement: Min app är bäst i sin kategori på _________ 
+	Detta gör att man sticker ut från konkurrenter på marknaden
+* Differentiera VAD du är bäst på
+* Brainstorma! Högt och lågt och sortera bort i efterhand. Brainstorma alla möjliga scenario, allt som kan hända i appen, utfall, möjligheter (sorteras bort sen)
+* Sortera bort generiska funktioner (sök etc. allt som kommer finnas)
+* Sortera bort icke-bäst på, BEST AT, spara till senare
+* Prototypa - hur kan det se ut på riktigt? Var tydlig med att det är en mockup!
+* Testa (koden och designen)
+
+BRANDING/ BRAND IDENTITY
+Unicorn
+För att sticka ut i mängden, ge hemsidan en personlighet
+Logotyp, karisma, personlighet
+
+Brand identity
+-------------------------------------------------------------------------------------
+FÄRG - färger är kopplade till olika känslor men är olika för olika kulturer
+Rött är normalt att ha på varningsskyltar eftersom rött är den färg som uppfattas snabbast av ögat. (I kina kopplas rött till fest)
+Exit-skyltar är gröna varför? För att grönt färdas bättre i rök och vatten
+Demografi - vilka riktar vi oss till? Kön/ålder etc.
+
+Simultankontrast - vad har du för färger i bakgrunden?
+
+Färgpalett är bra att ha att falla tillbaka på, man behöver inte ha med alla färger men kan falla tillbaka
+Kontrast | Bas | Mörkare | Ljusare
+Nå färgskillnad genom att öka/minska styrka med 10% ish, transparenta lager
+Använd inte för många färger
+Delad resurs, ha samma blå färg!!
+Motivera gradienter (ha dom inte överallt)
+
+Adobe Color - bra verktyg
+Colourlovers - färg och mönster
+Tänk på färgblinda! Finns verktyg specifikt för det!
+-------------------------------------------------------------------------------------
+TYPSNITT
+Sans serif bättre när det gälller små textstorlekar, typ i appar etc.
+Serif binder ihop bokstäver till ord tydligt, men inte om det är barn eller folk med dyslexi som läser
+Inte fler än tre typsnitt i ett projekt
+Storleken har betydelse, använd alltid den största om du står och velar
+Använd bold, rubriktext etc.
+Undvik marginaljustering
+Text som är perfekt rak både på vänster och höger sida kan bli problematisk, mönsterfloder kan uppstå.
+Använd specialeffekter sparsamt
+God typografisk hierarki - vad i texten är viktigast?
+------------------------------------------------------------------------------------
+LOGOTYP
+namnen bör vara plattformsoberoende, inte kalla i*** eller ***droid
+Platta ikoner:
+* Metrostudio 5 (man kan rita upp bilderna i kod)
+* The nounproject (symboler)
+
+95% av top 100 varumärken har en eller två färger
+93% igenkänningsbara vid liten storlek
+
+99 designs - guide för färger i gradienter (gradienter kan bli suddiga vid utskrift)
+
+* Namn
+* Gradient
+* Stor och liten logga
+--------------------------------------------------------------------------------------
+BILDER
+Stockphotos
+Pixabay
+
+* Skalbarhet, proportionerligt
+* Relevans & kvalitet
+* Kontrast och färgval tillsammans med bilderna så att text etc syns
+
+Microsoft Design Language/Fluent
+
+Kopiera stilarna som plattformarna har
+Läs igenom guidelines som finns (färger, typsnitt logotyper etc.)
+
+
+--------------------------------------------------------
+STORYBOARD i powerpoint
+---------------------------------------------------------
+Se till så att appen/hemsidan är kompatibel för alla devices
+
+Resize
+Reflow
+Reposition
+Reveal - content som inte fick plats på telefonen
+Re-architect - i mobil måste man klicka på en artikel så kan man läsa, på hemsida ligger de bredvid varandra
+Replace 
+
+Navigering - hur använder konsumenten menyn? Enhandsfattning eller tvåhands?
+
+Hamburgermeny: där ska man inte ha nåt som är supervitkigt eller som används ofta, den är svårtåtkomlig (man kan ha typ inställningar där)
+
+Master/detail
+
+Panorama/hubb:
+
+Når vi saker snabbt kommer vi att uppfatta applikationen snabbt, men har man fler "knappar" framme minska skärmytan för annat
+
+Mått för touchytor:
+40x40pxl för de vanligaste
+50x50pxl för de viktigaste som man inte vill att de missar (typ köpknapp)
+I nödfall 30x30pxl MEN bara om det är max två backsteg för att ångra
+
+Ergonomi, var lägger man de viktiga knapparna så att man kan nå? långt ner på plattan
+Läsa gör du hellre högt upp
+
+TENETS AND TRAPS
+UI utvärderingsverktyg, man kan använda för att förbättra UIt och därmed UX
+Tenets beskriver bra attribut som UI ska ha
+Traps beskriver vanliga problem vi kan ha som degraderar vårt system
+De är relaterade till varandra
+Varje trap har en tenet som den degraderar
+9 tenets totalt
+*Understandable (förstår jag hur man hanterar den?)
+*Comfortable (sitter den fast i en sladd och inte når?)
+*Responsive (funkar den snabbt?)
+*Efficient (minimal effort från min sida)
+*Forgiving (får jag ångra att jag scannat en vara)
+*Discrete (piper jättehögt)
+*Protective (jag förlorar inte kopplingen)
+*Habituating (har jag hunnit lära mig till gång nummer två)
+*Beautiful (ser den proffsig ut och vågar jag koppla mina kort till den?)
+
+Intuitive "Using or based on what one feels to be true even without conscious reasoning; instinctive"
+Intuition is nothing more and nothing less than recognition
+Habituating är det intuitiva
+
+Invisible element - vi kan inte se elementet och därför vet vi inte vad vi ska göra
+bra invisible elements är tex kortkommandon
+
+Testa aldrig din User Interface själv, du kommer aldrig kunna ose gorillan igen.
+Effectively invisible - gorillan
+Uncomprehended element - ett löv istället för en penna för nytt brev
+Distractions - distraherad av animeringar, popup fönster, aviseringar etc.
+Inviting dead end - iTunes loggan med not som inte var musikuppspelning i tidig iPhone 
+Feedback failure
+Forced Syntax - systemet låter inte användaren tala eller skriva till det på ett naturligt sätt
+
+Comfortable
+Physical challenge, nå knappar, för små knappar
+Accidental activation
+Invisible element (screenshot på mobilen)
+
+Responsive
+Bekräftelse inom 100 millisekunder (knapp intryckt)
+Gensvar inom 500 millisekunder (page down, zoom etc.)
+Kontinuerlig feedback nör >1 sek
+Progressbar eller liknande när >2 sekunder
+Progress indikation var 2-5 sek (procent)
+Captive wait - tvinga användare att kolla på reklam
+
+Efficient
+Unnecessary step (i vissa fall känns färre steg som fler, typ blippa 5 mjölk eller blippa, ändra antal etc.)
+System amnesia - när systemet vet saker om dig men plötsligt inte kommer ihåg det (försöker sälja ett spel till dig och vet att du redan har spelet)
+Information overload - mycket otillgänglig text
+Bad prediction - autocorrect
+
+Forgiving
+Irreversible action - undo, låt oss göra misstag som går att ångra
+
+Discrete
+Unwanted Disclosure - Facebook basunerade ut vilka spel man spelade, vilken musik man lyssnade på
+
+Protective
+Spara-knapp förlegat, det ska följa med från ett device till ett annat, ex blipper i matbutiken
+
+Habituating
+UI är vanebildande när man över tiden gör saker automatiskt efter ett tag
+Gratuitous redundancy - 5 olika sätt att skapa en chatt på FB
+Variable outcome  - trycker på en knapp men får två olika resultat
+Wandering element - ibland ligger knappen på ett ställe och ibland på ett annat
+Ambiguous home
+
+Beautiful
+Smaksak
+Ska se proffsig ut
+Aligna saker så att det ser snyggt ut
+
+http://uitraps.com/
+www.azm.se

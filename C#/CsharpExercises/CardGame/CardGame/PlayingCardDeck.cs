@@ -9,6 +9,59 @@ namespace CardGame
     {
         public Queue<PlayingCard> Deck { get; set; }
 
+        public PlayingCardDeck(bool backSideUp)
+        {
+            Deck = new Queue<PlayingCard>();
+
+            foreach (var card in GenerateDeck(backSideUp))
+            {
+                Deck.Enqueue(card);
+            }
+        }
+
+        public PlayingCard DrawTopCard()
+        {
+            return Deck.Dequeue();
+        }
+
+        public void PlaceCardAtBottom(PlayingCard card)
+        {
+            Deck.Enqueue(card);
+        }
+
+        public void ShuffleDeck()
+        {
+            List<PlayingCard> DeckAsList = this.Deck.ToList();
+            this.Deck = new Queue<PlayingCard>();
+
+            Random rnd = new Random();
+
+            while (DeckAsList.Count > 0)
+            {
+                int cardIndex = rnd.Next(0, DeckAsList.Count);
+                Deck.Enqueue(DeckAsList[cardIndex]);
+                DeckAsList.RemoveAt(cardIndex);
+            }
+        }
+        public static IEnumerable<PlayingCard> GenerateDeck(bool backSideUp)
+        {
+            foreach (var suit in GenerateSuit())
+                foreach (var value in GenerateValue())
+                    yield return new PlayingCard(suit, value, backSideUp);
+        }
+
+        private static IEnumerable<CardValue> GenerateValue()
+        {
+            foreach (var value in Enum.GetValues(typeof(CardValue)))
+                yield return value;
+        }
+
+        private static IEnumerable<CardSuit> GenerateSuit()
+        {
+            foreach (var suit in Enum.GetValues(typeof(CardSuit)))
+                yield return suit;
+        }
+
         List<PlayingCard> cards = new List<PlayingCard>();
         public void AddSomeCards()
         {
