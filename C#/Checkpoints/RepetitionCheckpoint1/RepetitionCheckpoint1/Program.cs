@@ -1,32 +1,29 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
 
-namespace Checkpoint01
+namespace RepetitionCheckpoint1
 {
     class Program
     {
         static void Main(string[] args)
         {
-            string numbersTogether = AskUserForNumbers();
+            string numbersTogether = EnterNumbers();
             List<int> listOfNumbers = CreateArrayOfNumbers(numbersTogether);
-            DrawTriangle(listOfNumbers);
+            DrawTriangles(listOfNumbers);
         }
 
-        //GET LIST OF NUMBERS FROM USER
-        private static string AskUserForNumbers()
+        private static string EnterNumbers()
         {
             Console.Write("Write command: ");
             Console.ForegroundColor = ConsoleColor.Green;
-            string numbersTogether = Console.ReadLine();
-
-            return numbersTogether;
+            string numbers = Console.ReadLine();
+            return numbers;
         }
 
-        //CREATE LIST AND PARSE TO INT
         private static List<int> CreateArrayOfNumbers(string numbersTogether)
         {
-            string[] numbers = numbersTogether.Split(new[] { '-' });
+            // gör linq
+            string[] numbers = numbersTogether.Split('-');
 
             List<int> listOfNumbers = new List<int>();
             int x;
@@ -36,33 +33,28 @@ namespace Checkpoint01
                 x = int.Parse(number);
                 listOfNumbers.Add(x);
             }
-
             return listOfNumbers;
-            
         }
 
-        //REPORT TO USER
-        private static void DrawTriangle(List<int> listOfNumbers)
+        private static void DrawTriangles(List<int> listOfNumbers)
+
         {
             Console.ForegroundColor = ConsoleColor.White;
+            
 
             foreach (var number in listOfNumbers)
             {
                 Console.WriteLine();
-
-                for (int i = 0; i < number; i++)
+                for (int i = 1; i <= number; i++)
                 {
-                    for (int j = 0; j < i; j++)
+                    for (int k = 1; k <= i; k++)
                     {
-                        Console.WriteLine("*");
+                    Console.Write("*");
                     }
-                    Console.WriteLine("*");
+                    Console.WriteLine("");
                 }
-                Console.WriteLine();
-
             }
-
-        }        
+            Console.WriteLine();
+        }
     }
 }
-

@@ -1,0 +1,7 @@
+Onsdag 9/1
+
+On delete cascade
+ifall exempelvis authorid är kopplat till bookid och du tar bort author så kan du ta bort även de böcker som är kopplade.
+
+on delete set null
+då ersätts 

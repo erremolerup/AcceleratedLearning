@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>webapi1</title>
+</head>
+<body>
+    <h3>Post formulär till AddPlanet</h3>
+
+    <form method="post" action="/webapi1/AddPlanet">
+        Planet: <input name="Planet" />
+        Storlek: <input name="Size" />
+        <button>Ok</button>
+    </form>
+
+    <hr />
+
+    <h3>Get formulär till GetPlanet</h3>
+
+    <form action="/webapi1/GetPlanet" method="get">
+        Planet: <input name="Planet" />
+        Storlek: <input name="Size" />
+        <button>Get</button>
+    </form>
+
+    <hr />
+
+    <h3>Post formulär till AddPlanet2</h3>
+
+    <form method="post" action="/webapi1/AddPlanet2">
+        Planet: <input name="PlanetName" />
+        Storlek: <input name="PlanetSize" />
+        <button>Ok</button>
+    </form>
+
+    <hr />
+
+    <h3>Get formulär till GetPlanet2</h3>
+
+    <form action="/webapi1/GetPlanet2" method="get">
+        Planet: <input name="PlanetName" />
+        Storlek: <input name="PlanetSize" />
+        <button>Get</button>
+    </form>
+
+    <hr />
+</body>
+</html>

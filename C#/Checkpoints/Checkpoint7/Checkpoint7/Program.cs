@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace Checkpoint6
+namespace Checkpoint7
 {
     class Program
     {

@@ -27,32 +27,6 @@ namespace Checkpoint6._2
             context.Database.EnsureCreated();
         }
 
-        internal void AddRavioliForSpaceship(string spaceShipName, int numberOfRaviolis, string packDate)
-        {
-            for (int i = 1; i <= numberOfRaviolis; i++)
-            {
-                DateTime start = DateTime.Parse(packDate);
-                DateTime expire = start.AddDays(197);
-
-                bool exist = SeeIfShipExist(spaceShipName);
-
-                if (exist)
-                {
-                    Spaceship newShip = context.Spaceships.SingleOrDefault(x => x.Name == spaceShipName);
-
-                    var Ravioli = new RavioliOnboard
-                    {
-                        Name = "Ravioli",
-                        Spaceship = newShip,
-                        PackDate = start,
-                        ExpireDate = expire
-                    };
-                    context.RavioliOnBoard.Add(Ravioli);
-                }
-            }
-            context.SaveChanges();
-        }
-
         private bool SeeIfShipExist(string spaceShip)
         {
             return context.Spaceships.Any(x => x.Name == spaceShip);
@@ -85,6 +59,38 @@ namespace Checkpoint6._2
         public IEnumerable<Spaceship> GetAllSpaceships()
         {
             return context.Spaceships;
+        }
+
+        public void AddRavioliToSpaceship(string spaceShipName, int numberOfRaviolis, string packDate)
+        {
+            for (int i = 1; i <= numberOfRaviolis; i++)
+            {
+                DateTime start = DateTime.Parse(packDate);
+                DateTime expire = start.AddDays(197);
+
+                bool exist = SeeIfShipExist(spaceShipName);
+
+                if (exist)
+                {
+                    Spaceship newShip = context.Spaceships.SingleOrDefault(x => x.Name == spaceShipName);
+
+                    var Ravioli = new RavioliOnboard
+                    {
+                        Name = "Ravioli",
+                        Spaceship = newShip,
+                        PackDate = start,
+                        ExpireDate = expire
+                    };
+                    context.RavioliOnBoard.Add(Ravioli);
+                }
+            }
+            context.SaveChanges();
+            DisplayRaviolis();
+        }
+
+        public void DisplayRaviolis()
+        {
+            throw new NotImplementedException();
         }
     }
 }

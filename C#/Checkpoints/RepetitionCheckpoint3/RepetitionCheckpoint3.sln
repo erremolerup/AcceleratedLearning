@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Checkpoint6", "Checkpoint6\Checkpoint6.csproj", "{354C740D-8DF8-4143-B1FD-E27A76C286BF}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepetitionCheckpoint3", "RepetitionCheckpoint3\RepetitionCheckpoint3.csproj", "{95E826C0-DA37-45EE-A777-56134F3EA2E7}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,15 +11,15 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{354C740D-8DF8-4143-B1FD-E27A76C286BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{354C740D-8DF8-4143-B1FD-E27A76C286BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{354C740D-8DF8-4143-B1FD-E27A76C286BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{354C740D-8DF8-4143-B1FD-E27A76C286BF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{95E826C0-DA37-45EE-A777-56134F3EA2E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{95E826C0-DA37-45EE-A777-56134F3EA2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{95E826C0-DA37-45EE-A777-56134F3EA2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{95E826C0-DA37-45EE-A777-56134F3EA2E7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		SolutionGuid = {596A9ACF-2563-4C2D-8035-E675BFDA7D33}
+		SolutionGuid = {57B1B16B-80A4-475E-ACB0-6C4F930279B9}
 	EndGlobalSection
 EndGlobal

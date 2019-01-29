@@ -12,7 +12,7 @@ namespace Checkpoint6._2
         static void Main()
         {
             DataAccess dataAccess = new DataAccess();
-            //dataAccess.RecreateDatabase();
+            dataAccess.RecreateDatabase();
 
             dataAccess.ClearDatabase();
 
@@ -20,10 +20,10 @@ namespace Checkpoint6._2
             dataAccess.AddSpaceship("Millennium Falcon");
             dataAccess.AddSpaceship("Cylon Raider");
 
-            dataAccess.AddRavioliForSpaceship("Cylon Raider", 1, "2018-04-19");
-            dataAccess.AddRavioliForSpaceship("Millennium Falcon", 1, "2017-01-01");
-            dataAccess.AddRavioliForSpaceship("Millennium Falcon", 2, "2018-01-01");
-            dataAccess.AddRavioliForSpaceship("Nalle Puh", 99, "1950-01-01");
+            dataAccess.AddRavioliToSpaceship("Cylon Raider", 1, "2018-04-19");
+            dataAccess.AddRavioliToSpaceship("Millennium Falcon", 1, "2017-01-01");
+            dataAccess.AddRavioliToSpaceship("Millennium Falcon", 2, "2018-01-01");
+            dataAccess.AddRavioliToSpaceship("Nalle Puh", 99, "1950-01-01");
 
             IEnumerable<Spaceship> list = dataAccess.GetAllSpaceships();
             dataAccess.DisplaySpaceships(list);

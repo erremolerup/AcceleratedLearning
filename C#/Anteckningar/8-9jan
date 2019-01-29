@@ -1,0 +1,23 @@
+Tisdag 8/1
+
+Global Unique IDentifier
+Fördelar
+- Minimal risk att två GUIDS är lika => kan slå ihop data från flera tabeller t.o.m. från olika databaser/maskiner
+-Klienten kan generera id't utan att vara i kontakt med servern (där databasen är)
+-säkrare eftersom svårt att gissa
+
+Nackdelar
+-tar mycket plats
+-jobbigare att läsa vid debuggning
+
+32st hexadecimala tal
+
+Unikt?
+1000 miljarder hemsidor (10^12) hemsidor
+10 miljarder personer (10^10)
+
+Guid är på 32 hexadecimala tal (128 bits)
+16^32 = 3.4 * 10^38
+-------------------------------------------------------------------------
+Sequential ID
+Slumpade tal men nästa tal blir garanterat större än det senaste

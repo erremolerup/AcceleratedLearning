@@ -1,0 +1,14 @@
+//An Object Relational Mapper (ORM) which is a type of tool that simplifies mapping between objects in
+//HÄR GÖRS EN INSERT
+var fruit1 = new Fruit
+{
+	name = banan
+};
+context.Fruits.Add(fruit1);
+context.SaveChanges();
+
+//HÄR GÖRS EN SELECT
+foreach(var item in context.Fruits)
+{
+	Console.WriteLine(item.fruitId.ToString() + item)
+}
