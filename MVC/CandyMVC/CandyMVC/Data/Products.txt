@@ -1,0 +1,8 @@
+﻿1,Häxvrål,Saltlakrits svart hölje med brun fyllning
+2,Soda Pop,Turkos och syrlig med artificiell smak
+3,Polly,Chokladöverdragen nougat
+4,Romerska bågar,Choklad med apelsinsmak
+5,Punchpraliner,Pralin med punchsmak och chokladöverdrag
+6,Colanappar,Syrlig colasmak7,Daim,Knäckick bit med chokladöverdrag
+7,Daim,Knäckick bit med chokladöverdrag
+8,Daim,Knäckig bit med chokladöverdrag/images/daim.jpg

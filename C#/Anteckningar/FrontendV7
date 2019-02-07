@@ -1,0 +1,38 @@
+Javascript från 1995
+Varför? 
+- I samband med att internet kom
+- Enkelt
+- Web Designers
+- Deltidsprogrammerare
+- Skriva kod direkt i sidor
+
+Vad är Javascript?
+- Scriptspråk (till skillnad från C# där man kompilerar, det måste stämma för att kunna köra det)
+- Levande
+- Objektbaserat (C# klassbaserat)
+- Inte Java (fortsatt på hypen med Java-namnet men inget med det att göra)
+- Används på 99% av alla hemsidor
+- Standard (industristandard, finns konkurrerande lösningar)
+- Stöds av alla webbläsare
+- Begränsat (som en sandlåda, man kan inte göra exakt allt man vill, kommer inte åt filsystemet som att visa filer eller flytta dom pga. säkerhet, man vill kunna besöka en sida utan att få virus)
+- Populärt
+
+Javascript Frontend eller Backend (språket ser likadant ut)
+
+Syftet:
+- Visuella effekter
+- Spel
+- Validera formulär
+- Ajax (hämta data från ex. SMHI)
+- Moderna hemsidor (enklare datahantering)
+- Webappar (bank, mer avancerat)
+
+Det används för
+Webläsare
+Texteditor:
+
+Hö-klick:
+Visa sidkälla
+Inspektera
+Rubrik <h1> - <h6> där texten blir mindre ju högre siffra
+Brödtext: <p> för paragraph

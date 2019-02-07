@@ -1,0 +1,28 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>start</title>
+    <link href="/css/main.css" rel="stylesheet" />
+</head>
+<body>
+    <div id="addObservation">
+        <h3>Add observations</h3>
+        
+        Specie: <input id="addObservationBird" type="text"/>
+
+        <button onclick="clickAddBird()">Add</button>
+    </div>
+
+    <!--<button onclick="recreateDatabase()" id="recreateButton">Recreate database</button>-->
+
+    <h3>Show All Observations</h3>
+    <button onclick="clickShowObservations()">Show</button>
+    <div id="showObservations" style="display: none">
+
+     
+        All observations: <span id="birdObservations"></span>
+
+    </div>
+    <script src="/js/main.js"></script>
+</body>
+</html>

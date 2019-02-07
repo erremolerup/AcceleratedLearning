@@ -1,0 +1,20 @@
+﻿<link href="~/css/main.css" rel="stylesheet" />
+
+@model ProductListVm
+<h1>Product Index</h1>
+
+<h3>Visa produkt</h3>
+
+<form asp-action="GetById" method="get">
+    <select name="id" asp-items="Model.AllProducts"></select>
+    <button type="submit">Ok</button>
+</form>
+
+<h3>Lägg till produkt</h3>
+<form method="post">
+    <label asp-for="Product.Name">Namn</label>
+    <input asp-for="Product.Name" />
+    <label asp-for="Product.Description">Beskrivning</label>
+    <input asp-for="Product.Description" />
+    <button type="submit">Ok</button>
+</form>

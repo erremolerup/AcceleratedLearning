@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>competition</title>
+</head>
+<body>
+
+    <input id="nameInTextBox1" oninput="fillTextbox1()" /> <br /> <br />
+    <input id="nameInTextBox2" oninput="fillTextbox2()" /> <br /> <br />
+    <input id="nameInTextBox3" oninput="fillTextbox3()" /> <br /> <br />
+    <input id="nameInTextBox4" oninput="fillTextbox4()" /> <br /> <br />
+    <input id="nameInTextBox5" oninput="fillTextbox5()" /> <br /> <br />
+
+</body>
+</html>
+
+<script>
+    function fillTextbox1() {
+        //let numberOfInputs = 3;
+        //let reversedInput = 1;
+
+        //let nuberOfLists = 3;
+
+        //let inputsDiv = document.getElementById('nameInTextBox1');
+        
+        let name = document.getElementById('nameInTextBox1').value;
+
+        //let textBox1 = document.getElementsById('nameInTextBox1');
+        let textBox2 = document.getElementById("nameInTextBox2");
+        let textBox3 = document.getElementById("nameInTextBox3");
+        let textBox4 = document.getElementById("nameInTextBox4");
+        let textBox5 = document.getElementById("nameInTextBox5");
+
+        let reversedName = reverse(name);
+
+        //textBox1.value = name;
+        textBox2.value = name;
+        textBox3.value = name;
+        textBox4.value = reversedName;
+        textBox5.value = name;
+    }
+
+    function fillTextbox2() {
+        //let numberOfInputs = 3;
+        //let reversedInput = 1;
+
+        //let nuberOfLists = 3;
+
+        //let inputsDiv = document.getElementById('nameInTextBox1');
+
+        let name = document.getElementById('nameInTextBox2').value;
+
+        //let textBox1 = document.getElementsById('nameInTextBox1');
+        let textBox2 = document.getElementById("nameInTextBox2");
+        let textBox3 = document.getElementById("nameInTextBox3");
+        let textBox4 = document.getElementById("nameInTextBox4");
+        let textBox5 = document.getElementById("nameInTextBox5");
+
+        let reversedName = reverse(name);
+
+        //textBox1.value = name;
+        textBox2.value = name;
+        textBox3.value = name;
+        textBox4.value = reversedName;
+        textBox5.value = name;
+    }
+
+    function reverse(name) {
+        let updateArray = name.split("");
+        let reverseArray = updateArray.reverse();
+        let joinArray = reverseArray.join("");
+        return joinArray;
+    }
+
+</script>

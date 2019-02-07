@@ -1,0 +1,23 @@
+﻿@model Mvc02.Models.ViewModels.AddRoleVm
+
+<h2>Admin</h2>
+
+<h4>Add role for user</h4>
+<hr/>
+
+<form asp-action="AddRoleForUser">
+    <div asp-validation-summary="All" class="text-danger"></div>
+    <div class="form-group">
+        <label asp-for="Email" class="control-label">Email</label>
+        <input asp-for="Email" class="form-control"/>
+    </div>
+
+    <div class="form-group">
+        <label asp-for="RoleName" class="control-label">Rolename</label>
+        <input asp-for="RoleName" class="form-control" />
+    </div>
+
+    <div class="form-group">
+        <input type="submit" value="Submit" class="btn btn-default" />
+    </div>
+</form>

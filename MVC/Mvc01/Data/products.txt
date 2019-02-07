@@ -1,0 +1,7 @@
+3,Banan,beskrivning...
+4,Äpple,aa
+8,Fikon,bb
+9,Morot,sss
+10,sssssss,sss
+11,xxxxxx,xxx
+12,aa,vvv

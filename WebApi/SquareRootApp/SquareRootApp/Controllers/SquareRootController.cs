@@ -21,6 +21,7 @@ namespace SquareRootApp.Controllers
                 return BadRequest("Du måste ange ett positivt tal");
             }
             return Ok(Math.Sqrt((int)number));
+
         }
         
     }

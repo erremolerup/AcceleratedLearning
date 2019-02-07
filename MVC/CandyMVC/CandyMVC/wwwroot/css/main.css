@@ -1,0 +1,13 @@
+﻿h1, a, button, input, hr, textarea {
+    display: block;
+}
+
+a, li, button, input, hr {
+    margin-top: 12px;
+    margin-bottom: 12px;
+}
+
+body {
+    font-family: 'Comic Sans MS';
+    margin: 20px;
+}

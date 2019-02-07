@@ -1,15 +1,50 @@
 ﻿<!DOCTYPE html>
 <html>
 <head>
+    <meta charset="utf-8" />
     <title>webapi6</title>
 </head>
 <body>
-    <form method="get" action="/webapi6/Dokument">
-        Titel: <input name="title" />
-        Antal sidor: <input name="pages" />
-        Sammanfattning finns: <input type="checkbox" name="conclusion" value="true"/>
-        Publiceras: <input type="month"
-        <button>Ok</button>
+    <h1>Lägg till dokument</h1>
+
+    <form method="post" action="/webapi6/AddDocument">
+        Titel: <input type="text" name="Title" value="Mitt dokument" />
+        <br />
+        <br />
+        Antal sidor: <input type="number" name="NumberOfPages" value="25" />
+        <br />
+        <br />
+        Sammanfattning finns: <input type="checkbox" name="HasSummary" checked="checked" value="true" />
+        <br />
+        <br />
+        Publiceras: <input type="datetime-local" name=" PublishedFrom" value="2018-03-17T06:40" />
+        <br />
+        <br />
+        Pris: <input type="number" name="Price" value="122.5" />
+        <br />
+        <br />
+        Typ:
+        <select name="Type">
+            <option value="PDF">PDF</option>
+            <option value="WordDocument">Word Dokument</option>
+            <option value="Powerpoint">Powerpoint</option>
+        </select>
+        <br />
+        <br />
+        Taggar:
+        <select>
+            <option value="IT">IT</option>
+            <option value="Ekonomi">Ekonomi</option>
+            <option value="Miljö">Miljö</option>
+        </select>
+        <br />
+        <br />
+        (1)<input type="radio" name="Rating" value="1" />
+        (2)<input type="radio" name="Rating" value="2" />
+        (3)<input type="radio" name="Rating" value="3" />
+        (4)<input type="radio" name="Rating" value="4" />
+        (5)<input type="radio" name="Rating" value="5" />
+        <button type="submit">Ok</button>
     </form>
 
     <hr />

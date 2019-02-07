@@ -1,0 +1,19 @@
+﻿@model IEnumerable<Product>
+<link href="~/css/main.css" rel="stylesheet" />
+<h1>Alla produkter</h1>
+
+<a asp-action="GetById" asp-route-id="4">Visa produkt 4 med taghelper</a>
+<a asp-action="GetById" asp-route-id="9">Visa produkt 9 med taghelper</a>
+
+<ul>
+    @foreach (Product x in Model)
+    {
+        <li><a asp-action="GetById" asp-route-id="@x.Id">@x.Name</a></li>
+    }
+</ul>
+
+<form asp-action="GetById" method="get">
+    <input name="id" />
+    <button type="submit">Ok</button>
+</form>
+
