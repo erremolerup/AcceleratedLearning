@@ -20,23 +20,40 @@ namespace Mvc02.Controllers
             _context = context;
         }
 
+        //// GET: Products
+        //public async Task<IActionResult> Index(int? id)
+        //{
+        //    var allProducts = _context.Product.Include(x => x.Category);
+        //    if (id == null)
+        //    {
+        //        return View(await allProducts.ToListAsync());
+        //    }
+        //    else
+        //    {
+        //        return View(await allProducts.Where(x => x.CategoryId == id).ToListAsync());
+        //    }
+        //}
+
         // GET: Products
-        public async Task<IActionResult> Index(int? id)
+        public async Task<IActionResult> Index()
         {
-            var allProducts = _context.Product.Include(x => x.Category);
-            if (id == null)
-            {
-                return View(await allProducts.ToListAsync());
-            }
-            else
-            {
-                return View(await allProducts.Where(x => x.CategoryId == id).ToListAsync());
-            }
+            
+            var xxx = await _context.Product.Include(x => x.Category).ToListAsync();
+            return View(xxx);
+        }
+
+        public async Task<IActionResult> Search(string q)
+        {
+            var xxx = await _context.Product.Include(x => x.Category).Where(x => x.Name == q).ToListAsync();
+            return View(xxx);
         }
 
         // GET: Products/Details/5
         public async Task<IActionResult> Details(int? id)
         {
+            //ViewData["hello"] = "HELLO WORLD!";
+
+            
             if (id == null)
             {
                 return NotFound();

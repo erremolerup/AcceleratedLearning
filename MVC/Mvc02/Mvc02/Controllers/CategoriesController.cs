@@ -1,10 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
+﻿using System.Linq;
 using System.Threading.Tasks;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using Mvc02.Data;
 using Mvc02.Models.Entities;
@@ -27,6 +24,19 @@ namespace Mvc02.Controllers
             return View(await _context.Category.ToListAsync());
         }
 
+        // GET: Categories
+        public async Task<IActionResult> Search(string q)
+        {
+            var xxx = await _context.Category.Where(x => x.Name == q).ToListAsync();
+            return View(xxx);
+        }
+
+        //public async Task<IActionResult> AllProductsInCategory(string name)
+        //{
+        //    var xxx = await _context.Product.Include(x => x.Category).Where(x => x.Id == id).ToListAsync();
+        //    return View(xxx);
+        //}
+
         // GET: Categories/Details/5
         public async Task<IActionResult> Details(int? id)
         {
@@ -34,8 +44,8 @@ namespace Mvc02.Controllers
             {
                 return NotFound();
             }
-
-            var category = await _context.Category
+            //ViewData["dddd"] = 123;
+            Category category = await _context.Category
                 .FirstOrDefaultAsync(m => m.Id == id);
             if (category == null)
             {

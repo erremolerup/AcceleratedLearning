@@ -1,0 +1,25 @@
+﻿@model IEnumerable<HemNet.Models.Contact>
+
+@*@{
+        string test = ViewData["hello"].ToString();
+        //List<string> y = (List<string> ViewData[xx]);
+    }*@
+
+<h2>Contact</h2>
+
+<p>Sign up for our newsletter</p>
+
+
+<form method="get" asp-action="Subscribe">
+    <div>
+        <h5><strong>Name:</strong></h5>
+        <input type="text" name="name" placeholder="Write your name here.." size="30"><br />
+        <
+        <br />
+        <h5><strong>Email:</strong></h5>
+        <input type="email" name="email" placeholder="Write your email here.." size="30"><br />
+        <br />
+        <button>Submit</button>
+    </div>
+
+</form>

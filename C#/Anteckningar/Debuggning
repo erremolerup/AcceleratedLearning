@@ -1,0 +1,8 @@
+Debuggning
+
+Om man går in i metoden - då vet vi iallafall dert!
+
+Vad vill vi sedan ska hända? Vad ska gå in i objektet?
+
+Bind - skydd mot hackerattack
+Om nån elak person skulle vilja skicka in andra parametrar så kan den inte det om vi satt ([Bind(xxxx,yyy,ooo)]Object Object) då kan man bara skicka in dom.

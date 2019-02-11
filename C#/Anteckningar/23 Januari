@@ -1,0 +1,44 @@
+23 Januari
+
+stylesheets
+
+h1 {						//1poäng
+	color: red;
+	font-family: Arial
+	}
+	.ljusgraa{				//10poäng
+	color: #ddd;
+	}
+	#simbassäng{			//100poäng
+	color: aqua;
+	}
+	{						//1poäng
+	color: green;
+	font-family: Arial
+	}
+}
+<style/>
+<h1>Panda</h1>
+<h1> class="ljugraa">Panda</h1>
+<h1> class="ljugraa" id="simbassäng">Panda</h1>
+
+Class slår det första commandet att göra texten grön, man kan säga att de har olika poäng och att den som har högst poäng slår de med lägre. Om två commands med samma poäng läggs på samma text utförs den som ligger sist i koden.
+
+Bootstrap
+Handlar om yta
+Centrera, skapa kolumner etc är meckigt i script men lätt i Bootstrap
+Responsiva sidor, innehållet ändras baserat på vilken device man använder(tv, dator, platta, mobil)
+getbootstrap
+popper.js
+
+För att installera:
+de fyra länkarna:
+jquery
+
+<div>
+boostraps gridsystem
+</div>
+
+sm bryter lite senare (mer space)
+
+lg bryter tidigare (lägger saker direkt under varandra)

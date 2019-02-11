@@ -17,7 +17,7 @@ namespace Mvc02.Models.Entities
 
         [Required(ErrorMessage = "Obligatorisk")]
         [Range(0, 1000, ErrorMessage ="Priset måste vara mellan 0 och 1000")]
-        //[Column(TypeName = "decimal(18,2)")]
+        [Column(TypeName = "decimal(18,2)")]
         public decimal Price { get; set; }
 
         public bool ForSale { get; set; }
