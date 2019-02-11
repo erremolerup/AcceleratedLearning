@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 15
 VisualStudioVersion = 15.0.28010.2050
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindwiseUppgift", "FindwiseUppgift\FindwiseUppgift.csproj", "{9A66F835-7E04-494B-A325-697AF96EA1AD}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindwiseUppgift", "FindwiseUppgift\FindwiseUppgift.csproj", "{9A66F835-7E04-494B-A325-697AF96EA1AD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindwiseUppgift.Test", "FindwiseUppgift.Test\FindwiseUppgift.Test.csproj", "{EAB9D9A3-159D-4935-A4A1-8E60E6C5FC57}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{9A66F835-7E04-494B-A325-697AF96EA1AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{9A66F835-7E04-494B-A325-697AF96EA1AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{9A66F835-7E04-494B-A325-697AF96EA1AD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EAB9D9A3-159D-4935-A4A1-8E60E6C5FC57}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EAB9D9A3-159D-4935-A4A1-8E60E6C5FC57}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EAB9D9A3-159D-4935-A4A1-8E60E6C5FC57}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EAB9D9A3-159D-4935-A4A1-8E60E6C5FC57}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
