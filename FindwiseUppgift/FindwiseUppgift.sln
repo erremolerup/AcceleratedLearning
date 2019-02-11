@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2050
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindwiseUppgift", "FindwiseUppgift\FindwiseUppgift.csproj", "{9A66F835-7E04-494B-A325-697AF96EA1AD}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{9A66F835-7E04-494B-A325-697AF96EA1AD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A66F835-7E04-494B-A325-697AF96EA1AD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A66F835-7E04-494B-A325-697AF96EA1AD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A66F835-7E04-494B-A325-697AF96EA1AD}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {7922843C-7E89-4042-BD44-DB8CC4F0A6F7}
+	EndGlobalSection
+EndGlobal
