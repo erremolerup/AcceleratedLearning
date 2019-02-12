@@ -22,5 +22,7 @@ namespace HemNet.Models
         public int HousingCooperativeId { get; set; }
 
         public decimal PricePerSquareMeter => Price / Size;
+
+        public string Color { get; set; }
     }
 }

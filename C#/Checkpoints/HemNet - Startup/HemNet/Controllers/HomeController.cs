@@ -6,16 +6,22 @@ using System.Threading.Tasks;
 using HemNet.Data;
 using Microsoft.AspNetCore.Mvc;
 using HemNet.Models;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.AspNetCore.Hosting;
 
 namespace HemNet.Controllers
 {
     public class HomeController : Controller
     {
         private readonly ApplicationDbContext _context;
+        private readonly SiteConfig _siteConfig;
+        private readonly IHostingEnvironment _hostingEnvironment;
 
-        public HomeController(ApplicationDbContext context)
+        public HomeController(ApplicationDbContext context, SiteConfig siteConfig, IHostingEnvironment hostingEnvironment)
         {
             _context = context;
+            _siteConfig = siteConfig;
+            _hostingEnvironment = hostingEnvironment;
         }
         public IActionResult Index()
         {
@@ -26,6 +32,28 @@ namespace HemNet.Controllers
         public IActionResult Error()
         {
             return View(new ErrorViewModel { RequestId = Activity.Current?.Id ?? HttpContext.TraceIdentifier });
+        }
+
+        public IActionResult Migrate()
+        {
+            _context.Database.Migrate();
+            ViewData["Message"] = "Database migrated";
+            return View("Index");
+        }
+
+        public IActionResult FelFelFel()
+        {
+            throw new Exception("fel, fel, fel!!");
+        }
+
+        public IActionResult SiteConfig()
+        {
+            return Ok(_siteConfig);
+        }
+
+        public IActionResult IHosting()
+        {
+            return Ok(_hostingEnvironment);
         }
 
         public IActionResult Recreate()

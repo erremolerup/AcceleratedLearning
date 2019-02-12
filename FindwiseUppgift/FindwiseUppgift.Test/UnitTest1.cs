@@ -7,7 +7,7 @@ namespace FindwiseUppgift.Test
     public class UnitTest1
     {
         [TestMethod]
-        public void seaarch_for_findwise()
+        public void search_for_findwise()
         {
             // Arrange
             Program.ResetIndex();
@@ -30,11 +30,10 @@ namespace FindwiseUppgift.Test
 
             Assert.AreEqual(3, result[2].Id);
             Assert.AreEqual((1M /3M), result[2].Ratio);
-
         }
 
         [TestMethod]
-        public void seaarch_for_kalle()
+        public void search_for_kalle()
         {
             // Arrange
             Program.ResetIndex();
@@ -48,12 +47,11 @@ namespace FindwiseUppgift.Test
             // Assert
 
             Assert.AreEqual(0, result.Count);
-
         }
 
 
         [TestMethod]
-        public void seaarch1()
+        public void search1()
         {
             // Arrange
             Program.ResetIndex();
@@ -64,12 +62,10 @@ namespace FindwiseUppgift.Test
 
             // Assert
             Assert.AreEqual(0, result.Count);
-
-
         }
 
         [TestMethod]
-        public void seaarch2()
+        public void search2()
         {
             // Arrange
             Program.ResetIndex();
@@ -83,12 +79,11 @@ namespace FindwiseUppgift.Test
 
             Assert.AreEqual(1, result[0].Id);
             Assert.AreEqual(1, result[0].Ratio);
-
         }
 
 
         [TestMethod]
-        public void seaarch3()
+        public void search3()
         {
             // Arrange
             Program.ResetIndex();
@@ -99,12 +94,10 @@ namespace FindwiseUppgift.Test
 
             // Assert
             Assert.AreEqual(0, result.Count);
-
-
         }
 
         [TestMethod]
-        public void seaarch4()
+        public void search4()
         {
             // Arrange
             Program.ResetIndex();
@@ -115,8 +108,6 @@ namespace FindwiseUppgift.Test
 
             // Assert
             Assert.AreEqual(0, result.Count);
-
-
         }
     }
 }

@@ -1,7 +1,13 @@
-﻿<h1>Home</h1>
+﻿@inject SiteConfig SiteConfig
+<h1>@SiteConfig.WelcomeMessage</h1>
+
+
 
 <form style="margin-top: 2em;">
-    <button asp-action="Recreate" class="btn btn-default">Recreate</button>
+    <button asp-action="Migrate" class="btn btn-default">Migrate</button>
+    <button asp-action="SiteConfig" class="btn btn-default">SiteConfig</button>
+    <button asp-action="Ihosting" class="btn btn-default">IHosting</button>
+    @*<button asp-action="Recreate" class="btn btn-default">Recreate</button>*@
     <button asp-action="Seed" class="btn btn-default">Seed</button>
 </form>
 

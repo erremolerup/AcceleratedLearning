@@ -12,6 +12,8 @@ using Microsoft.EntityFrameworkCore;
 using HemNet.Data;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
+using HemNet.Filters;
+using HemNet.Models;
 
 namespace HemNet
 {
@@ -40,7 +42,13 @@ namespace HemNet
             services.AddDefaultIdentity<IdentityUser>()
                 .AddEntityFrameworkStores<ApplicationDbContext>();
 
-            services.AddMvc().SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+            services.AddMvc(x =>
+            {
+                x.Filters.Add(new ExceptionFilterAttribute());
+            }).SetCompatibilityVersion(CompatibilityVersion.Version_2_1);
+
+            var appConfiguration = Configuration.GetSection("SiteConfig").Get<SiteConfig>();
+            services.AddSingleton(appConfiguration);
         }
 
         // This method gets called by the runtime. Use this method to configure the HTTP request pipeline.
@@ -49,7 +57,7 @@ namespace HemNet
             if (env.IsDevelopment())
             {
                 app.UseDeveloperExceptionPage();
-                app.UseDatabaseErrorPage();
+                app.UseDatabaseErrorPage(); //Ger apply migration-knapp
             }
             else
             {

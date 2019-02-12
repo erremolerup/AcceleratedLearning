@@ -7,24 +7,25 @@ namespace FindwiseUppgift
 {
     public class Program
     {
-        static Dictionary<string, List<DocumentRatio>> index = new Dictionary<string, List<DocumentRatio>>(); //skapar en dictionary index där strängen, id och ratio kan sparas
+        static Dictionary<string, List<DocumentRatio>> index; //skapar en dictionary index där strängen, id och ratio kan sparas
 
         static void Main(string[] args) //metoder för att fylla index med innehåll
         {
-            CreateIndexes();
+            //ResetIndex();
+            CreateIndex();
             string searchTerm = GetUserInput();
             List<DocumentRatio> result = Search(searchTerm);
             DisplayResult(result);
         }
 
-        private static void CreateIndexes() //skapar index-innehåll med id 1, 2 och 3
+        private static void CreateIndex() //skapar index-innehåll med id 1, 2 och 3
         {
-            UpdateIndex("findwise", 1);
+            UpdateIndex("findwise findwise", 1);
             UpdateIndex("hej findwise", 2);
             UpdateIndex("findwise är kul", 3);
         }
 
-        public static void ResetIndex()
+        public static void ResetIndex() //tomt index om vi har gammalt i
         {
             index = new Dictionary<string, List<DocumentRatio>>();
         }
@@ -33,39 +34,42 @@ namespace FindwiseUppgift
         {
             if (content == null)
             {
-                return;
+                return; // om content är tom returnerar vi inget
             }
 
             List<string> allWords = content.Split(' ').ToList();
             List<string> uniqueWords = content.Split(' ').Distinct().ToList();
 
-            foreach (string word in uniqueWords)
+            foreach (string uniqueWord in uniqueWords)
             {
-                int numberOfWords = allWords.Count();//räknar antalet ord i en fras
+                int numberOfWords = allWords.Count();//räknar totala antalet ord i en fras
                 //int numberOfUniqueWords = uniqueWords.Count(); behövs ej?
 
-                var counter = 0; //jämför word i uniqueWords med item i allWords, ökar med ett för varje match
+                int wordOccurrence = 0; //jämför word i uniqueWords med item i allWords, ökar med ett för varje match
 
-                foreach (var item in allWords)
+                foreach (var word in allWords)
                 {
-                    if (item == word)
+                    if (word == uniqueWord) 
                     {
-                        counter++;
+                        wordOccurrence++;
                     }
                 }
-                decimal ratio = (decimal)counter / numberOfWords; //räknar ut hur många procent sökordet upptar av varje fras genom att ta hur många gånger ordet förekommer i strängen / antalet totala ord
 
-                if (!index.ContainsKey(word)) //om ordet inte redan finns i index adderas det och en tom lista till index
+                // Alternativ med linq: int counter2 = allWords.Count(w => w == uniqueWord);
+
+                decimal occurenceRatio = (decimal)wordOccurrence / numberOfWords; //räknar ut hur många procent sökordet upptar av varje fras genom att ta hur många gånger ordet förekommer i strängen / antalet totala ord
+
+                if (!index.ContainsKey(uniqueWord)) //om ordet inte redan finns i index adderas det och en tom lista till index
                 {
-                    index.Add(word, new List<DocumentRatio>());
+                    index.Add(uniqueWord, new List<DocumentRatio>());
                 }
 
-                var dr = new DocumentRatio //både om ordet redan rinns och om det inte finns anges även ett id och procentsats
+                var dr = new DocumentRatio //både om ordet redan rinns och om det inte finns anges även ett id och procentsats, är det per ord eller per "fras"?
                 {
                     Id = documentId,
-                    Ratio = ratio
+                    Ratio = occurenceRatio
                 };
-                index[word].Add(dr);
+                index[uniqueWord].Add(dr); // exakt vad händer här???
             }
         }
 
@@ -82,8 +86,7 @@ namespace FindwiseUppgift
         {
             if (index.ContainsKey(searchterm))
             {
-
-                List<DocumentRatio> documentRatios = index[searchterm];
+                List<DocumentRatio> documentRatios = index[searchterm]; //vad händer här i ord?
 
                 var result = documentRatios.OrderByDescending(x => x.Ratio).ToList();
 
@@ -91,7 +94,7 @@ namespace FindwiseUppgift
             }
             else
             {
-                return new List<DocumentRatio>();
+                return new List<DocumentRatio>(); // annars returnerar man en tom lista?
             }
         }
 
@@ -99,7 +102,7 @@ namespace FindwiseUppgift
         {
             foreach (var item in result)
             {
-                Console.WriteLine("Document-Id: " + item.Id + " " + item.Ratio * 100 + "%");
+                Console.WriteLine($"Document-Id: {item.Id} innehåller sökordet till: {item.Ratio * 100} %");
             }
 
             if (result.Count == 0)

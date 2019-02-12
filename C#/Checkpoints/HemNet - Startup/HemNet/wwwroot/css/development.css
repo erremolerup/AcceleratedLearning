@@ -36,6 +36,6 @@ body {
     }
 }
 
-h1 {
-    color: blue;
+.navbar-inverse {
+    background-color: red;
 }

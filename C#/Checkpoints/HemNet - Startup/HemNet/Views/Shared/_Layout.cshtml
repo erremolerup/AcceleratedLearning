@@ -1,4 +1,5 @@
-﻿<!DOCTYPE html>
+﻿@*@inject SiteConfig SiteConfig*@
+<!DOCTYPE html>
 <html>
 <head>
     <meta charset="utf-8" />
@@ -8,6 +9,7 @@
     <environment include="Development">
         <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.css" />
         <link rel="stylesheet" href="~/css/site.css" />
+        <link rel="stylesheet" href="~/css/development.css" />
     </environment>
     <environment exclude="Development">
         <link rel="stylesheet" href="https://ajax.aspnetcdn.com/ajax/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -32,7 +34,11 @@
                 <ul class="nav navbar-nav">
                     <li><a asp-area="" asp-controller="Apartments" asp-action="Index">Apartments</a></li>
                     <li><a asp-area="" asp-controller="HousingCooperatives" asp-action="Index">Cooperatives</a></li>
+                    @if (SiteConfig.ShowContactLink)
+                    {
                     <li><a asp-area="" asp-controller="Contact" asp-action="Index">Contact</a></li>
+                    }
+
                 </ul>
                 <partial name="_LoginPartial" />
             </div>

@@ -9,7 +9,7 @@ namespace HemNet.Models
 {
     public class Contact
     {
-        //public int Id { get; set; }
+        public int Id { get; set; }
 
         //Namn på användaren
         [Required(ErrorMessage = "Field can't be empty")]

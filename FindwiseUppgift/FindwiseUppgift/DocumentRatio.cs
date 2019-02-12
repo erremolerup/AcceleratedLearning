@@ -10,5 +10,6 @@ namespace FindwiseUppgift
     {
         public int Id { get; set; }
         public decimal Ratio { get; set; }
+        //public int Counter { get; set; }
     }
 }
