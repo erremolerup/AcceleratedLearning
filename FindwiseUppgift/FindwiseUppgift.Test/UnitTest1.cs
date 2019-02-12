@@ -9,14 +9,17 @@ namespace FindwiseUppgift.Test
         [TestMethod]
         public void search_for_findwise()
         {
+
+
             // Arrange
-            Program.ResetIndex();
-            Program.UpdateIndex("findwise", 1);
-            Program.UpdateIndex("hej findwise", 2);
-            Program.UpdateIndex("findwise är kul", 3);
+            var simpleSearch = new SimpleSearch();
+            simpleSearch.ResetIndex();
+            simpleSearch.UpdateIndex("findwise", 1);
+            simpleSearch.UpdateIndex("hej findwise", 2);
+            simpleSearch.UpdateIndex("findwise är kul", 3);
 
             // Act
-            List<DocumentRatio> result = Program.Search("findwise");
+            List<DocumentRatio> result = simpleSearch.Search("findwise");
 
             // Assert
 
@@ -36,13 +39,14 @@ namespace FindwiseUppgift.Test
         public void search_for_kalle()
         {
             // Arrange
-            Program.ResetIndex();
-            Program.UpdateIndex("findwise", 1);
-            Program.UpdateIndex("hej findwise", 2);
-            Program.UpdateIndex("findwise är kul", 3);
+            var simpleSearch = new SimpleSearch();
+            simpleSearch.ResetIndex();
+            simpleSearch.UpdateIndex("findwise", 1);
+            simpleSearch.UpdateIndex("hej findwise", 2);
+            simpleSearch.UpdateIndex("findwise är kul", 3);
 
             // Act
-            List<DocumentRatio> result = Program.Search("kalle");
+            List<DocumentRatio> result = simpleSearch.Search("kalle");
 
             // Assert
 
@@ -54,11 +58,12 @@ namespace FindwiseUppgift.Test
         public void search1()
         {
             // Arrange
-            Program.ResetIndex();
-            Program.UpdateIndex("findwise", 1);
+            var simpleSearch = new SimpleSearch();
+            simpleSearch.ResetIndex();
+            simpleSearch.UpdateIndex("findwise", 1);
 
             // Act
-            List<DocumentRatio> result = Program.Search("kalle");
+            List<DocumentRatio> result = simpleSearch.Search("kalle");
 
             // Assert
             Assert.AreEqual(0, result.Count);
@@ -68,11 +73,12 @@ namespace FindwiseUppgift.Test
         public void search2()
         {
             // Arrange
-            Program.ResetIndex();
-            Program.UpdateIndex("findwise", 1);
+            var simpleSearch = new SimpleSearch();
+            simpleSearch.ResetIndex();
+            simpleSearch.UpdateIndex("findwise", 1);
 
             // Act
-            List<DocumentRatio> result = Program.Search("findwise");
+            List<DocumentRatio> result = simpleSearch.Search("findwise");
 
             // Assert
             Assert.AreEqual(1, result.Count);
@@ -86,11 +92,12 @@ namespace FindwiseUppgift.Test
         public void search3()
         {
             // Arrange
-            Program.ResetIndex();
-            Program.UpdateIndex("", 1);
+            var simpleSearch = new SimpleSearch();
+            simpleSearch.ResetIndex();
+            simpleSearch.UpdateIndex("", 1);
 
             // Act
-            List<DocumentRatio> result = Program.Search("findwise");
+            List<DocumentRatio> result = simpleSearch.Search("findwise");
 
             // Assert
             Assert.AreEqual(0, result.Count);
@@ -100,11 +107,12 @@ namespace FindwiseUppgift.Test
         public void search4()
         {
             // Arrange
-            Program.ResetIndex();
-            Program.UpdateIndex(null, 1);
+            var simpleSearch = new SimpleSearch();
+            simpleSearch.ResetIndex();
+            simpleSearch.UpdateIndex(null, 1);
 
             // Act
-            List<DocumentRatio> result = Program.Search("findwise");
+            List<DocumentRatio> result = simpleSearch.Search("findwise");
 
             // Assert
             Assert.AreEqual(0, result.Count);
