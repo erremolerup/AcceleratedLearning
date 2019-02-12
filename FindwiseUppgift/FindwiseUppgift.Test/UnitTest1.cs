@@ -13,7 +13,6 @@ namespace FindwiseUppgift.Test
 
             // Arrange
             var simpleSearch = new SimpleSearch();
-            simpleSearch.ResetIndex();
             simpleSearch.UpdateIndex("findwise", 1);
             simpleSearch.UpdateIndex("hej findwise", 2);
             simpleSearch.UpdateIndex("findwise är kul", 3);
@@ -40,7 +39,6 @@ namespace FindwiseUppgift.Test
         {
             // Arrange
             var simpleSearch = new SimpleSearch();
-            simpleSearch.ResetIndex();
             simpleSearch.UpdateIndex("findwise", 1);
             simpleSearch.UpdateIndex("hej findwise", 2);
             simpleSearch.UpdateIndex("findwise är kul", 3);
@@ -59,7 +57,6 @@ namespace FindwiseUppgift.Test
         {
             // Arrange
             var simpleSearch = new SimpleSearch();
-            simpleSearch.ResetIndex();
             simpleSearch.UpdateIndex("findwise", 1);
 
             // Act
@@ -74,7 +71,6 @@ namespace FindwiseUppgift.Test
         {
             // Arrange
             var simpleSearch = new SimpleSearch();
-            simpleSearch.ResetIndex();
             simpleSearch.UpdateIndex("findwise", 1);
 
             // Act
@@ -93,7 +89,6 @@ namespace FindwiseUppgift.Test
         {
             // Arrange
             var simpleSearch = new SimpleSearch();
-            simpleSearch.ResetIndex();
             simpleSearch.UpdateIndex("", 1);
 
             // Act
@@ -108,7 +103,6 @@ namespace FindwiseUppgift.Test
         {
             // Arrange
             var simpleSearch = new SimpleSearch();
-            simpleSearch.ResetIndex();
             simpleSearch.UpdateIndex(null, 1);
 
             // Act

@@ -8,13 +8,10 @@ namespace FindwiseUppgift
     {
         Dictionary<string, List<DocumentRatio>> index; //skapar en dictionary index där strängen, id och ratio kan sparas
 
-        public void ResetIndex() //tomt index om vi har gammalt i, måste skapas för att index ska kunna fyllas
+        public SimpleSearch() //konstruktor: tomt index om vi har gammalt i, måste skapas för att index ska kunna fyllas
         {
             index = new Dictionary<string, List<DocumentRatio>>();
         }
-
-        
-
 
         public void UpdateIndex(string content, int documentId) //kollar ifall ordet är unikt och räknar hur många gånger varje ord förekommer i strängen content
         {

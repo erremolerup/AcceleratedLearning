@@ -12,9 +12,6 @@ namespace FindwiseUppgift
         {
             var simpleSearch = new SimpleSearch();
 
-            simpleSearch.ResetIndex();
-
-
             simpleSearch.UpdateIndex("findwise findwise", 1);
             simpleSearch.UpdateIndex("hej findwise", 2);
             simpleSearch.UpdateIndex("findwise är kul", 3);
