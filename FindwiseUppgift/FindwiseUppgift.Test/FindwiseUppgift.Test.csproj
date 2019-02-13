@@ -16,4 +16,16 @@
     <ProjectReference Include="..\FindwiseUppgift\FindwiseUppgift.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="NallePuh.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="NallePuhWithOneExtra.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+    <None Update="Björn.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

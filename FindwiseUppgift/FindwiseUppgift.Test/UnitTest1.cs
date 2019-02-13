@@ -1,11 +1,72 @@
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using System.Collections.Generic;
+using System.IO;
 
 namespace FindwiseUppgift.Test
 {
     [TestClass]
     public class UnitTest1
     {
+        [TestMethod]
+        public void filetest1()
+        {
+            //Arrange
+            var simpleSearch = new SimpleSearch();
+            simpleSearch.UpdateIndex(File.ReadAllText("NallePuh.txt"), 1);
+            simpleSearch.UpdateIndex(File.ReadAllText("NallePuhWithOneExtra.txt"), 4);
+            simpleSearch.UpdateIndex(File.ReadAllText("Björn.txt"), 2);
+
+
+            // Act
+            List<DocumentRatio> result = simpleSearch.Search("Nalle");
+            
+            // Assert
+
+            Assert.AreEqual(2, result.Count);
+            Assert.AreEqual(4, result[0].Id);
+            Assert.AreEqual(1, result[1].Id);
+
+        }
+
+        [TestMethod]
+        public void filetest2()
+        {
+            //Arrange
+            var simpleSearch = new SimpleSearch();
+            simpleSearch.UpdateIndex(File.ReadAllText("NallePuh.txt"), 1);
+            simpleSearch.UpdateIndex(File.ReadAllText("NallePuhWithOneExtra.txt"), 4);
+            simpleSearch.UpdateIndex(File.ReadAllText("Björn.txt"), 2);
+
+
+            // Act
+            List<DocumentRatio> result = simpleSearch.Search("björn");
+
+            // Assert
+
+            Assert.AreEqual(1, result.Count);
+            Assert.AreEqual(2, result[0].Id);
+
+        }
+
+        [TestMethod]
+        public void filetest3()
+        {
+            //Arrange
+            var simpleSearch = new SimpleSearch();
+            simpleSearch.UpdateIndex(File.ReadAllText("NallePuh.txt"), 1);
+            simpleSearch.UpdateIndex(File.ReadAllText("NallePuhWithOneExtra.txt"), 4);
+            simpleSearch.UpdateIndex(File.ReadAllText("Björn.txt"), 2);
+
+            // Act
+            List<DocumentRatio> result = simpleSearch.Search("Puh");
+
+            // Assert
+            Assert.AreEqual(2, result.Count);
+            Assert.AreEqual(1, result[0].Id);
+            Assert.AreEqual(4, result[1].Id);
+
+        }
+
         [TestMethod]
         public void search_for_findwise()
         {

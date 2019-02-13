@@ -17,7 +17,8 @@ namespace FindwiseUppgift
         {
             if (content == null)
             {
-                return; // om documentet är tomt gör vi inget
+                //skicka med fras
+                return; // om dokumentet är tomt gör vi inget
             }
 
             List<string> allWords = content.Split(' ').ToList();
@@ -56,8 +57,6 @@ namespace FindwiseUppgift
             }
         }
 
-        
-
         public List<DocumentRatio> Search(string searchterm)
         {
             if (index.ContainsKey(searchterm))
@@ -73,7 +72,5 @@ namespace FindwiseUppgift
                 return new List<DocumentRatio>(); // annars returnerar man en tom lista?
             }
         }
-
-        
     }
 }
