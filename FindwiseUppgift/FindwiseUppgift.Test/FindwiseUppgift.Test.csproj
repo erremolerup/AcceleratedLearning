@@ -17,13 +17,13 @@
   </ItemGroup>
 
   <ItemGroup>
-    <None Update="NallePuh.txt">
+    <None Update="Barrskog.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="NallePuhWithOneExtra.txt">
+    <None Update="Fjällskog.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
-    <None Update="Björn.txt">
+    <None Update="Lövskog.txt">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </None>
   </ItemGroup>

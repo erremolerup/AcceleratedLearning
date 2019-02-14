@@ -1,4 +1,5 @@
-﻿using CandyMVC.Services;
+﻿using CandyMVC.Models;
+using CandyMVC.Services;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -10,16 +11,22 @@ namespace CandyMVC.Controllers
 {
     public class WeatherController : Controller
     {
-        //private SmhiService _service;
+        private SmhiService _service;
 
-        //public WeatherController(ProductRepository service)
-        //{
-        //    _service = service;
-        //}
+        public WeatherController(SmhiService service)
+        {
+            _service = service;
+        }
 
         public IActionResult Index()
         {
             return View();
+        }
+
+        public IActionResult GetPrognosis()
+        {
+            IEnumerable<ProductAttributes> allProducts = _service.GetAll();
+            return View(allProducts);
         }
     }
 }

@@ -1,7 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text.RegularExpressions;
+using System.IO;
 
 namespace FindwiseUppgift
 {
@@ -11,14 +10,19 @@ namespace FindwiseUppgift
         static void Main(string[] args) //metoder för att fylla index med innehåll
         {
             var simpleSearch = new SimpleSearch();
-
-            simpleSearch.UpdateIndex("findwise findwise", 1);
-            simpleSearch.UpdateIndex("hej findwise du är kul", 2);
-            simpleSearch.UpdateIndex("findwise är kul", 3);
+            SearchForFindwise(simpleSearch);
+            SearchForForest(simpleSearch);
 
             string searchTerm = GetUserInput();
             List<DocumentRatio> result = simpleSearch.Search(searchTerm);
             DisplayResult(result);
+        }
+
+        private static void SearchForForest(SimpleSearch simpleSearch)
+        {
+            simpleSearch.UpdateIndex(File.ReadAllText("Data/Barrskog.txt"), 1);
+            simpleSearch.UpdateIndex(File.ReadAllText("Data/Fjällskog.txt"), 2);
+            simpleSearch.UpdateIndex(File.ReadAllText("Data/Lövskog.txt"), 3);
         }
 
         private static string GetUserInput()
@@ -41,6 +45,13 @@ namespace FindwiseUppgift
             {
                 Console.WriteLine($"Din sökning innehöll inga träffar...");
             }
+        }
+
+        private static void SearchForFindwise(SimpleSearch simpleSearch)
+        {
+            simpleSearch.UpdateIndex("findwise findwise", 1);
+            simpleSearch.UpdateIndex("hej findwise du är kul", 2);
+            simpleSearch.UpdateIndex("findwise är kul", 3);
         }
     }
 }

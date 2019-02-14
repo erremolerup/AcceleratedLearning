@@ -1,0 +1,13 @@
+﻿<link href="~/css/main.css" rel="stylesheet" />
+
+@model WeatherVm
+<h1>Weather Index</h1>
+
+<h3>Väder</h3>
+<form method="post">
+    <label asp-for="Longitude">Latitude</label>
+    <input asp-for="Longitude" />
+    <label asp-for="Latitude">Longitude</label>
+    <input asp-for="Latitude" />
+    <button type="submit">Ok</button>
+</form>

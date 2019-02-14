@@ -7,71 +7,65 @@ namespace FindwiseUppgift.Test
     [TestClass]
     public class UnitTest1
     {
+
         [TestMethod]
-        public void filetest1()
+        public void should_only_return_barrskog_document_when_searching_for_barrskogen()
         {
             //Arrange
             var simpleSearch = new SimpleSearch();
-            simpleSearch.UpdateIndex(File.ReadAllText("NallePuh.txt"), 1);
-            simpleSearch.UpdateIndex(File.ReadAllText("NallePuhWithOneExtra.txt"), 4);
-            simpleSearch.UpdateIndex(File.ReadAllText("Björn.txt"), 2);
-
+            simpleSearch.UpdateIndex(File.ReadAllText("Barrskog.txt"), 1);
+            simpleSearch.UpdateIndex(File.ReadAllText("Lövskog.txt"), 2);
+            simpleSearch.UpdateIndex(File.ReadAllText("Fjällskog.txt"), 3);
 
             // Act
-            List<DocumentRatio> result = simpleSearch.Search("Nalle");
+            List<DocumentRatio> result = simpleSearch.Search("Barrskogen");
             
             // Assert
-
-            Assert.AreEqual(2, result.Count);
-            Assert.AreEqual(4, result[0].Id);
-            Assert.AreEqual(1, result[1].Id);
-
-        }
-
-        [TestMethod]
-        public void filetest2()
-        {
-            //Arrange
-            var simpleSearch = new SimpleSearch();
-            simpleSearch.UpdateIndex(File.ReadAllText("NallePuh.txt"), 1);
-            simpleSearch.UpdateIndex(File.ReadAllText("NallePuhWithOneExtra.txt"), 4);
-            simpleSearch.UpdateIndex(File.ReadAllText("Björn.txt"), 2);
-
-
-            // Act
-            List<DocumentRatio> result = simpleSearch.Search("björn");
-
-            // Assert
-
             Assert.AreEqual(1, result.Count);
-            Assert.AreEqual(2, result[0].Id);
-
+            Assert.AreEqual(1, result[0].Id);
         }
 
+
         [TestMethod]
-        public void filetest3()
+        public void should_return_barrskog_and_lövskog_when_search_for_träd()
         {
             //Arrange
             var simpleSearch = new SimpleSearch();
-            simpleSearch.UpdateIndex(File.ReadAllText("NallePuh.txt"), 1);
-            simpleSearch.UpdateIndex(File.ReadAllText("NallePuhWithOneExtra.txt"), 4);
-            simpleSearch.UpdateIndex(File.ReadAllText("Björn.txt"), 2);
+            simpleSearch.UpdateIndex(File.ReadAllText("Barrskog.txt"), 1);
+            simpleSearch.UpdateIndex(File.ReadAllText("Lövskog.txt"), 2);
+            simpleSearch.UpdateIndex(File.ReadAllText("Fjällskog.txt"), 3);
 
             // Act
-            List<DocumentRatio> result = simpleSearch.Search("Puh");
+            List<DocumentRatio> result = simpleSearch.Search("Träd");
 
             // Assert
             Assert.AreEqual(2, result.Count);
             Assert.AreEqual(1, result[0].Id);
-            Assert.AreEqual(4, result[1].Id);
-
+            Assert.AreEqual(2, result[1].Id);
         }
 
         [TestMethod]
-        public void search_for_findwise()
+        public void should_return_all_documents_when_search_for_skog()
         {
+            //Arrange
+            var simpleSearch = new SimpleSearch();
+            simpleSearch.UpdateIndex(File.ReadAllText("Barrskog.txt"), 1);
+            simpleSearch.UpdateIndex(File.ReadAllText("Lövskog.txt"), 2);
+            simpleSearch.UpdateIndex(File.ReadAllText("Fjällskog.txt"), 3);
 
+            // Act
+            List<DocumentRatio> result = simpleSearch.Search("Skog");
 
+            // Assert
+            Assert.AreEqual(3, result.Count);
+            Assert.AreEqual(3, result[0].Id);
+            Assert.AreEqual(2, result[1].Id);
+            Assert.AreEqual(1, result[2].Id);
+        }
+
+        [TestMethod]
+        public void should_return_three_hits_when_search_for_findwise()
+        {
             // Arrange
             var simpleSearch = new SimpleSearch();
             simpleSearch.UpdateIndex("findwise", 1);
@@ -96,7 +90,7 @@ namespace FindwiseUppgift.Test
         }
 
         [TestMethod]
-        public void search_for_kalle()
+        public void should_return_zero_hits_when_search_for_kalle2()
         {
             // Arrange
             var simpleSearch = new SimpleSearch();
@@ -114,7 +108,7 @@ namespace FindwiseUppgift.Test
 
 
         [TestMethod]
-        public void search1()
+        public void should_return_zero_hits_when_search_for_kalle1()
         {
             // Arrange
             var simpleSearch = new SimpleSearch();
@@ -128,7 +122,7 @@ namespace FindwiseUppgift.Test
         }
 
         [TestMethod]
-        public void search2()
+        public void should_return_one_hit_when_search_for_findwise()
         {
             // Arrange
             var simpleSearch = new SimpleSearch();
@@ -146,7 +140,7 @@ namespace FindwiseUppgift.Test
 
 
         [TestMethod]
-        public void search3()
+        public void should_return_zero_hits_when_search_for_findwise2()
         {
             // Arrange
             var simpleSearch = new SimpleSearch();
@@ -160,7 +154,7 @@ namespace FindwiseUppgift.Test
         }
 
         [TestMethod]
-        public void search4()
+        public void should_return_zero_hits_when_search_for_findwise1()
         {
             // Arrange
             var simpleSearch = new SimpleSearch();
