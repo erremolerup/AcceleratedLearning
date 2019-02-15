@@ -6,37 +6,34 @@ namespace FindwiseUppgift
 {
     public class SimpleSearch
     {
-        Dictionary<string, List<DocumentRatio>> index; //skapar en dictionary index där strängen, id och ratio kan sparas
+        Dictionary<string, List<DocumentRatio>> index;
         
         // *Konstruktor: skapar nytt tomt index när programmet körs*
 
-        public SimpleSearch() //konstruktor: tomt index om vi har gammalt i, måste skapas för att index ska kunna fyllas
+        public SimpleSearch()
         {
             index = new Dictionary<string, List<DocumentRatio>>();
         }
 
         // *Uppdaterar index'et utifrån ett dokument*
 
-        public void UpdateIndex(string content, int documentId) //kollar ifall ordet är unikt och räknar hur många gånger varje ord förekommer i strängen content
-        {
+        public void UpdateIndex(string content, int documentId) 
+        { 
             if (content == null)
             {
-                return; // om dokumentet är tomt gör vi inget, inget innehåll så ingen kan hitta det i en sökning
+                return;
             }
 
             List<string> allWords = content.Split(new char[] { ' ','.',',' } ).Select(x => x.ToLower()).ToList();
             List<string> uniqueWords = allWords.Distinct().ToList();
 
-            bool test = uniqueWords.Any(x => x == "träd");
-
-            int numberOfWords = allWords.Count();//räknar totala antalet ord i en fras
+            int numberOfWords = allWords.Count();
 
             foreach (string uniqueWord in uniqueWords)
             {
-
                 // *Räknar ut förekomsten av ordet*
 
-                int wordOccurrence = 0; //jämför word i uniqueWords med item i allWords, ökar med ett för varje match
+                int wordOccurrence = 0;
 
                 foreach (var word in allWords)
                 {
@@ -46,30 +43,28 @@ namespace FindwiseUppgift
                     }
                 }
 
-                // Alternativ med linq: int counter2 = allWords.Count(w => w == uniqueWord);
-
                 // *Beräknar hur populärt ordet är i procent*
                 
-                decimal occurenceRatio = Math.Round((decimal)wordOccurrence / numberOfWords, 5); //räknar ut hur många procent sökordet upptar av varje fras genom att ta hur många gånger ordet förekommer i strängen / antalet totala ord
+                decimal occurenceRatio = Math.Round((decimal)wordOccurrence / numberOfWords, 5); 
 
-                if (!index.ContainsKey(uniqueWord)) //om ordet inte redan finns i index adderas det och en tom lista till index
+                if (!index.ContainsKey(uniqueWord)) 
                 {
-                    index.Add(uniqueWord, new List<DocumentRatio>()); //tom låda att fylla
+                    index.Add(uniqueWord, new List<DocumentRatio>()); 
                 }
 
-                var documentRatio = new DocumentRatio //både om ordet redan rinns och om det inte finns anges även ett id och procentsats, är det per ord eller per "fras"?
+                var documentRatio = new DocumentRatio
                 {
                     Id = documentId,
                     Ratio = occurenceRatio
                 };
 
-                // Lägger in Id och procent för varje unikt ord
+                // *Lägger in Id och procent för varje unikt ord*
 
-                index[uniqueWord].Add(documentRatio); // öppnar skåpet och skriver in dr i listan
+                index[uniqueWord].Add(documentRatio);
             }
         }
 
-        // Kollar upp sökordet i index och ordnar efter antal träffar
+        // *Kollar upp sökordet i index och ordnar efter antal träffar*
 
         public List<DocumentRatio> Search(string searchterm)
         {
@@ -77,7 +72,7 @@ namespace FindwiseUppgift
 
             if (index.ContainsKey(searchterm))
             {
-                List<DocumentRatio> documentRatios = index[searchterm]; //slår upp sökordet i index och ser vad som ligger bakom det, dvs listan med id och ratio
+                List<DocumentRatio> documentRatios = index[searchterm];
 
                 var result = documentRatios.OrderByDescending(x => x.Ratio).ToList();
 
@@ -85,7 +80,7 @@ namespace FindwiseUppgift
             }
             else
             {
-                return new List<DocumentRatio>(); // annars returnerar man en tom lista
+                return new List<DocumentRatio>();
             }
         }
     }

@@ -6,8 +6,9 @@ namespace FindwiseUppgift
 {
     public class Program
     {
+        // *Metoder för att fylla index med innehåll*
 
-        static void Main(string[] args) //metoder för att fylla index med innehåll
+        static void Main(string[] args) 
         {
             var simpleSearch = new SimpleSearch();
             SearchForFindwise(simpleSearch);
@@ -17,14 +18,7 @@ namespace FindwiseUppgift
             List<DocumentRatio> result = simpleSearch.Search(searchTerm);
             DisplayResult(result);
         }
-
-        private static void SearchForForest(SimpleSearch simpleSearch)
-        {
-            simpleSearch.UpdateIndex(File.ReadAllText("Data/Barrskog.txt"), 1);
-            simpleSearch.UpdateIndex(File.ReadAllText("Data/Fjällskog.txt"), 2);
-            simpleSearch.UpdateIndex(File.ReadAllText("Data/Lövskog.txt"), 3);
-        }
-
+       
         private static string GetUserInput()
         {
             Console.WriteLine("Sök på ord:");
@@ -52,6 +46,13 @@ namespace FindwiseUppgift
             simpleSearch.UpdateIndex("findwise findwise", 1);
             simpleSearch.UpdateIndex("hej findwise du är kul", 2);
             simpleSearch.UpdateIndex("findwise är kul", 3);
+        }
+
+        private static void SearchForForest(SimpleSearch simpleSearch)
+        {
+            simpleSearch.UpdateIndex(File.ReadAllText("Data/Barrskog.txt"), 1);
+            simpleSearch.UpdateIndex(File.ReadAllText("Data/Fjällskog.txt"), 2);
+            simpleSearch.UpdateIndex(File.ReadAllText("Data/Lövskog.txt"), 3);
         }
     }
 }
